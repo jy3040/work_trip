@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SignUp01Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="200.35dp"
+            android:layout_height="55.46dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/logo1"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="47.12dp"
+            android:text="아이디"
+            android:textSize="11sp"
+            android:textColor="#9D9D9D"/>
+
+        <EditText
+            android:id="@+id/et_id"
+            android:layout_width="320dp"
+            android:layout_height="49.75dp"
+            android:layout_gravity="center"
+            android:background="@drawable/line1_round_12"
+            android:hint="ex) work_trip"
+            android:textColorHint="#9D9D9D"
+            android:textSize="13sp"
+            android:paddingLeft="24dp"
+            android:layout_marginTop="3dp"/>
+        <TextView
+            android:id="@+id/tv_id_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="52dp"
+            android:text="중복 확인 필요"
+            android:visibility="gone"
+            android:textSize="11sp"
+            android:textColor="#5D81FF"
+            android:layout_marginTop="7dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="47.12dp"
+            android:text="비밀번호 입력"
+            android:textSize="11sp"
+            android:textColor="#9D9D9D"
+            android:layout_marginTop="25dp"/>
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="49.75dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:background="@drawable/line1_round_12">
+            <EditText
+                android:id="@+id/et_pw1"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="ex) work_trip1234!!"
+                android:background="#FFFFFF"
+                android:textColorHint="#9D9D9D"
+                android:textSize="13sp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="24dp"/>
+            <ImageButton
+                android:id="@+id/ib_pw1_visibility"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/visible1"
+                android:layout_gravity="center"
+                android:layout_marginLeft="13dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_pw1_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="52dp"
+            android:text="영문, 숫자, 특수문자 포함 12자 이내"
+            android:textSize="11sp"
+            android:textColor="#5D81FF"
+            android:layout_marginTop="7dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="47.12dp"
+            android:text="비밀번호 재입력"
+            android:textSize="11sp"
+            android:textColor="#9D9D9D"
+            android:layout_marginTop="25dp"/>
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="49.75dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:background="@drawable/line1_round_12">
+            <EditText
+                android:id="@+id/et_pw2"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:textColorHint="#9D9D9D"
+                android:textSize="13sp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="24dp"/>
+            <ImageButton
+                android:id="@+id/ib_pw2_visibility"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/visible1"
+                android:layout_gravity="center"
+                android:layout_marginLeft="13dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_pw2_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="52dp"
+            android:text="영문, 숫자, 특수문자 포함 12자 이내"
+            android:visibility="invisible"
+            android:textSize="11sp"
+            android:textColor="#5D81FF"
+            android:layout_marginTop="7dp"/>
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/ib_next"
+        android:layout_width="320dp"
+        android:layout_height="56.5dp"
+        android:background="@drawable/sign_up_next1"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"/>
+</LinearLayout>
