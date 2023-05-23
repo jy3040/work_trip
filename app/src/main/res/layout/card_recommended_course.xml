@@ -8,10 +8,12 @@
     app:cardCornerRadius="15dp"
     app:cardElevation="8dp">
 
+    <!--sample-->
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/card_recommended_course_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:scaleType="centerCrop"
         app:riv_corner_radius="15dp"
 
         android:background="@drawable/card_recommended_course_sample1"/>
@@ -30,6 +32,9 @@
             android:layout_marginTop="16dp"
             android:textColor="#ffffff"
             android:textSize="13sp"
+            android:ems="16"
+            android:maxLines="1"
+            android:ellipsize="end"
 
             android:text="산 좋고 물 좋은"/>
 
@@ -42,6 +47,9 @@
             android:textStyle="bold"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="4dp"
+            android:ems="15"
+            android:maxLines="1"
+            android:ellipsize="end"
 
             android:text="강원도 힐링 워크숍 떠나기"/>
 
@@ -80,9 +88,5 @@
                 android:layout_marginRight="16dp"/>
 
         </LinearLayout>
-
-
     </LinearLayout>
-
-
 </androidx.cardview.widget.CardView>

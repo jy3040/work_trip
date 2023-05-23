@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_recommended_food"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="8dp">
+
+    <!--sample-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/card_recommended_food_background"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:layout_weight="0.8"
+                android:background="@drawable/card_recommended_program_sample1"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius_top_left="15dp"
+
+                app:riv_corner_radius_top_right="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/card_recommended_food_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="7"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+
+                    android:text="상호명"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/star_gray"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="4dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/star_gray"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="4dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/star_gray"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="4dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/star_gray"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="4dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/star_gray"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="4dp"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/card_recommended_program_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="11sp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="8"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+
+                    android:text="서울시 서초구 우면동 12번지 34-56"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
