@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_recommended_course"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="8dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/card_recommended_course_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:riv_corner_radius="15dp"
+
+        android:background="@drawable/card_recommended_course_sample1"/>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/card_recommended_course_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="#ffffff"
+            android:textSize="13sp"
+
+            android:text="산 좋고 물 좋은"/>
+
+        <TextView
+            android:id="@+id/card_recommended_course_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+
+            android:text="강원도 힐링 워크숍 떠나기"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sample1"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="4dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sample2"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="4dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sample3"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="16dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
