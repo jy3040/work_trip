@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.work_trip"
-        minSdk 30
+        minSdk 29
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -40,4 +40,5 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation "androidx.cardview:cardview:1.0.0"
     implementation 'com.makeramen:roundedimageview:2.3.0'
+
 }

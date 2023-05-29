@@ -14,9 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        app:riv_corner_radius="15dp"
-
-        android:background="@drawable/card_recommended_course_sample1"/>
+        app:riv_corner_radius="15dp"/>
+        <!--android:background="@drawable/card_recommended_course_sample1"-->
     
     <LinearLayout
         android:layout_width="fill_parent"
@@ -34,9 +33,9 @@
             android:textSize="13sp"
             android:ems="16"
             android:maxLines="1"
-            android:ellipsize="end"
+            android:ellipsize="end"/>
+            <!--android:text="산 좋고 물 좋은"-->
 
-            android:text="산 좋고 물 좋은"/>
 
         <TextView
             android:id="@+id/card_recommended_course_title"
@@ -49,9 +48,9 @@
             android:layout_marginTop="4dp"
             android:ems="15"
             android:maxLines="1"
-            android:ellipsize="end"
+            android:ellipsize="end"/>
 
-            android:text="강원도 힐링 워크숍 떠나기"/>
+            <!--android:text="강원도 힐링 워크숍 떠나기"-->
 
         <LinearLayout
             android:layout_width="fill_parent"

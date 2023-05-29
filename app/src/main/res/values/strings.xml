@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">work_trip</string>
+    
+    <string-array name="card_recommended_course_subName">
+        <item>산 좋고 물 좋은</item>
+        <item>산 좋고 물 좋은</item>
+        <item>산 좋고 물 좋은</item>
+        <item>산 좋고 물 좋은</item>
+        <item>산 좋고 물 좋은</item>
+    </string-array>
+    
+    <string-array name="card_recommended_course_name">
+        <item>강원도 힐링 워크숍 떠나기</item>
+        <item>강원도 힐링 워크숍 떠나기</item>
+        <item>강원도 힐링 워크숍 떠나기</item>
+        <item>강원도 힐링 워크숍 떠나기</item>
+        <item>강원도 힐링 워크숍 떠나기</item>
+    </string-array>
 </resources>
