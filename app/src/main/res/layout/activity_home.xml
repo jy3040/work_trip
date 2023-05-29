@@ -1,998 +1,993 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="MainActivity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:orientation="vertical"
-        android:background="@drawable/main_background1">
+        android:layout_height="match_parent">
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp">
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                />
-
-            <ImageButton
-                android:id="@+id/main_goToParticipant"
-                android:layout_width="58dp"
-                android:layout_height="32dp"
-                android:layout_gravity="right"
-                android:layout_marginRight="16dp"
-                android:background="@drawable/goToParticipant"/>
-
-            <ImageButton
-                android:id="@+id/main_notification"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:layout_gravity="right"
-                android:layout_marginRight="16dp"
-                android:background="@drawable/notifications_white"/>
-        </LinearLayout>
-
-        <!--...........................................................-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/search"
-                android:layout_width="320dp"
-                android:layout_height="49.75dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/search_bar_text" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                />
-
-            <ImageButton
-                android:id="@+id/search_setting"
-                android:layout_width="49.75dp"
-                android:layout_height="49.75dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="16dp"
-                android:background="@drawable/search_setting" />
-        </LinearLayout>
-
-        <!--...........................................................-->
-        <LinearLayout
+            tools:context="MainActivity"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_gravity="center_vertical">
-
-            <ImageButton
-                android:id="@+id/category_lodging"
-                android:layout_width="61dp"
-                android:layout_height="95dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/category_lodging"/>
-
-            <ImageButton
-                android:id="@+id/category_course"
-                android:layout_width="65dp"
-                android:layout_height="95dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/category_course"/>
-
-            <ImageButton
-                android:id="@+id/category_program"
-                android:layout_width="65dp"
-                android:layout_height="95dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/category_program" />
-
-            <ImageButton
-                android:id="@+id/category_food"
-                android:layout_width="61dp"
-                android:layout_height="95dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/category_food"/>
-
-            <ImageButton
-                android:id="@+id/category_vehicle"
-                android:layout_width="61dp"
-                android:layout_height="95dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/category_vehicle"/>
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <!--...........................................................-->
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="24dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="24dp"
-                android:text="추천 코스"
-                android:textSize="18sp"
-                android:textColor="#000000"
-                android:textStyle="bold"
-                />
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                />
-
-            <ImageButton
-                android:id="@+id/recommended_course_details"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginRight="16dp"
-                android:background="@drawable/arrow_right_black" />
-
-        </LinearLayout>
-
-        <!--카드: java로 다시 구현 예정-->
-        <HorizontalScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:orientation="vertical">
 
             <LinearLayout
-
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="350dp"
+                android:orientation="vertical"
+                android:background="@drawable/main_background1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp">
 
-                <androidx.recyclerview.widget.RecyclerView
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/main_goToParticipant"
+                        android:layout_width="58dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="16dp"/>
+
+                    <ImageButton
+                        android:id="@+id/main_notification"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/notifications_white"/>
+                </LinearLayout>
+
+                <!--...........................................................-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/search"
+                        android:layout_width="320dp"
+                        android:layout_height="49.75dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/search_bar_text" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/search_setting"
+                        android:layout_width="49.75dp"
+                        android:layout_height="49.75dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/search_setting" />
+                </LinearLayout>
+
+                <!--...........................................................-->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/recommended_course_cards"/>
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical">
+
+                    <ImageButton
+                        android:id="@+id/category_lodging"
+                        android:layout_width="61dp"
+                        android:layout_height="95dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/category_lodging"/>
+
+                    <ImageButton
+                        android:id="@+id/category_course"
+                        android:layout_width="65dp"
+                        android:layout_height="95dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/category_course"/>
+
+                    <ImageButton
+                        android:id="@+id/category_program"
+                        android:layout_width="65dp"
+                        android:layout_height="95dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/category_program" />
+
+                    <ImageButton
+                        android:id="@+id/category_food"
+                        android:layout_width="61dp"
+                        android:layout_height="95dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/category_food"/>
+
+                    <ImageButton
+                        android:id="@+id/category_vehicle"
+                        android:layout_width="61dp"
+                        android:layout_height="95dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/category_vehicle"/>
+                </LinearLayout>
 
             </LinearLayout>
-        </HorizontalScrollView>
 
-        <!--...........................................................-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="24dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="24dp"
-                android:text="추천 프로그램"
-                android:textSize="18sp"
-                android:textColor="#000000"
-                android:textStyle="bold"
-                />
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                />
+            <!--...........................................................-->
 
-            <ImageButton
-                android:id="@+id/recommended_program_details"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginRight="16dp"
-                android:background="@drawable/arrow_right_black" />
-
-        </LinearLayout>
-
-        <!--카드: java로 다시 구현 예정-->
-        <HorizontalScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
             <LinearLayout
-                android:id="@+id/recommended_prgram_cards"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <androidx.cardview.widget.CardView
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="200dp"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/card_recommended_program"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="8dp">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                    <!--sample-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="24dp"
+                        android:text="추천 코스"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:id="@+id/recommended_course_details"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/arrow_right_black" />
+
+                </LinearLayout>
+
+                <!--카드: java로 다시 구현 예정-->
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
                     <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:orientation="vertical">
 
-                        <LinearLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
-                            <com.makeramen.roundedimageview.RoundedImageView
-                                android:id="@+id/card_recommended_program_background"
-                                android:layout_width="fill_parent"
-                                android:layout_height="120dp"
-                                android:layout_weight="0.8"
-                                android:background="@drawable/card_recommended_program_sample1"
-                                android:scaleType="centerCrop"
-                                app:riv_corner_radius_top_left="15dp"
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recommended_course_cards"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
 
-                                app:riv_corner_radius_top_right="15dp" />
-                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
 
-                        <LinearLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="fill_parent"
-                            android:orientation="vertical"
-                            >
+                <!--...........................................................-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="24dp"
+                        android:text="추천 프로그램"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:id="@+id/recommended_program_details"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/arrow_right_black" />
+
+                </LinearLayout>
+
+                <!--카드: java로 다시 구현 예정-->
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/recommended_prgram_cards"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/card_recommended_program"
+                            android:layout_width="wrap_content"
+                            android:layout_height="200dp"
+                            android:layout_margin="8dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="8dp">
+
+                            <!--sample-->
                             <LinearLayout
                                 android:layout_width="fill_parent"
                                 android:layout_height="fill_parent"
                                 android:orientation="vertical">
-                                <TextView
-                                    android:id="@+id/card_recommended_program_title"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textColor="#000000"
-                                    android:textSize="12sp"
-                                    android:textStyle="bold"
-                                    android:layout_marginLeft="16dp"
-                                    android:layout_marginTop="8dp"
-                                    android:ems="7"
-                                    android:maxLines="1"
-                                    android:ellipsize="end"
-
-                                    android:text="네온사인 만들기"/>
 
                                 <LinearLayout
                                     android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
+                                    android:layout_height="wrap_content">
 
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/people_black"
-                                        android:layout_marginLeft="16dp"
-                                        android:layout_marginTop="4dp"
-                                        />
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        android:id="@+id/card_recommended_program_background"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="120dp"
+                                        android:layout_weight="0.8"
+                                        android:background="@drawable/card_recommended_program_sample1"
+                                        android:scaleType="centerCrop"
+                                        app:riv_corner_radius_top_left="15dp"
 
-                                    <TextView
-                                        android:id="@+id/card_recommended_program_people"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginLeft="4dp"
-                                        android:layout_marginTop="4dp"
-                                        android:textSize="8sp"
-                                        android:textColor="#000000"
-
-                                        android:text="30~40명"
-                                        />
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/time_black"
-                                        android:layout_marginLeft="8dp"
-                                        android:layout_marginTop="4dp"
-                                        />
-
-                                    <TextView
-                                        android:id="@+id/card_recommended_program_time"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginLeft="4dp"
-                                        android:layout_marginTop="4dp"
-                                        android:textSize="8sp"
-                                        android:textColor="#000000"
-
-                                        android:text="60분"
-                                        />
+                                        app:riv_corner_radius_top_right="15dp" />
                                 </LinearLayout>
-                                <TextView
-                                    android:id="@+id/card_recommended_program_price"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textColor="#000000"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold"
-                                    android:layout_marginLeft="16dp"
-                                    android:layout_marginTop="8dp"
-                                    android:ems="6"
-                                    android:maxLines="1"
-                                    android:ellipsize="end"
 
-                                    android:text="50,000원~"/>
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/card_recommended_program_title"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="16dp"
+                                            android:layout_marginTop="8dp"
+                                            android:ellipsize="end"
+                                            android:ems="7"
+                                            android:maxLines="1"
+                                            android:text="네온사인 만들기"
+                                            android:textColor="#000000"
+                                            android:textSize="12sp"
+
+                                            android:textStyle="bold" />
+
+                                        <LinearLayout
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="16dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/people_black" />
+
+                                            <TextView
+                                                android:id="@+id/card_recommended_program_people"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="4dp"
+                                                android:layout_marginTop="4dp"
+                                                android:text="30~40명"
+                                                android:textColor="#000000"
+
+                                                android:textSize="8sp" />
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="8dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/time_black" />
+
+                                            <TextView
+                                                android:id="@+id/card_recommended_program_time"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="4dp"
+                                                android:layout_marginTop="4dp"
+                                                android:text="60분"
+                                                android:textColor="#000000"
+
+                                                android:textSize="8sp" />
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:id="@+id/card_recommended_program_price"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="16dp"
+                                            android:layout_marginTop="8dp"
+                                            android:ellipsize="end"
+                                            android:ems="6"
+                                            android:maxLines="1"
+                                            android:text="50,000원~"
+                                            android:textColor="#000000"
+                                            android:textSize="14sp"
+
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
                             </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
 
 
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/card_recommended_program"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="8dp">
+                        </androidx.cardview.widget.CardView>
 
-                    <!--sample-->
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:orientation="vertical">
+                        <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/card_recommended_program"
+                            android:layout_width="wrap_content"
+                            android:layout_height="200dp"
+                            android:layout_margin="8dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="8dp">
 
-                        <LinearLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content">
-
-                            <com.makeramen.roundedimageview.RoundedImageView
-                                android:id="@+id/card_recommended_program_background"
-                                android:layout_width="fill_parent"
-                                android:layout_height="120dp"
-                                android:layout_weight="0.8"
-                                android:background="@drawable/card_recommended_program_sample1"
-                                android:scaleType="centerCrop"
-                                app:riv_corner_radius_top_left="15dp"
-
-                                app:riv_corner_radius_top_right="15dp" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="fill_parent"
-                            android:orientation="vertical"
-                            >
+                            <!--sample-->
                             <LinearLayout
                                 android:layout_width="fill_parent"
                                 android:layout_height="fill_parent"
                                 android:orientation="vertical">
-                                <TextView
-                                    android:id="@+id/card_recommended_program_title"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textColor="#000000"
-                                    android:textSize="12sp"
-                                    android:textStyle="bold"
-                                    android:layout_marginLeft="16dp"
-                                    android:layout_marginTop="8dp"
-                                    android:ems="7"
-                                    android:maxLines="1"
-                                    android:ellipsize="end"
-
-                                    android:text="네온사인 만들기"/>
 
                                 <LinearLayout
                                     android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
+                                    android:layout_height="wrap_content">
 
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/people_black"
-                                        android:layout_marginLeft="16dp"
-                                        android:layout_marginTop="4dp"
-                                        />
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        android:id="@+id/card_recommended_program_background"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="120dp"
+                                        android:layout_weight="0.8"
+                                        android:background="@drawable/card_recommended_program_sample1"
+                                        android:scaleType="centerCrop"
+                                        app:riv_corner_radius_top_left="15dp"
 
-                                    <TextView
-                                        android:id="@+id/card_recommended_program_people"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginLeft="4dp"
-                                        android:layout_marginTop="4dp"
-                                        android:textSize="8sp"
-                                        android:textColor="#000000"
-
-                                        android:text="30~40명"
-                                        />
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/time_black"
-                                        android:layout_marginLeft="8dp"
-                                        android:layout_marginTop="4dp"
-                                        />
-
-                                    <TextView
-                                        android:id="@+id/card_recommended_program_time"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginLeft="4dp"
-                                        android:layout_marginTop="4dp"
-                                        android:textSize="8sp"
-                                        android:textColor="#000000"
-
-                                        android:text="60분"
-                                        />
+                                        app:riv_corner_radius_top_right="15dp" />
                                 </LinearLayout>
-                                <TextView
-                                    android:id="@+id/card_recommended_program_price"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textColor="#000000"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold"
-                                    android:layout_marginLeft="16dp"
-                                    android:layout_marginTop="8dp"
-                                    android:ems="6"
-                                    android:maxLines="1"
-                                    android:ellipsize="end"
 
-                                    android:text="50,000원~"/>
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/card_recommended_program_title"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="16dp"
+                                            android:layout_marginTop="8dp"
+                                            android:ellipsize="end"
+                                            android:ems="7"
+                                            android:maxLines="1"
+                                            android:text="네온사인 만들기"
+                                            android:textColor="#000000"
+                                            android:textSize="12sp"
+
+                                            android:textStyle="bold" />
+
+                                        <LinearLayout
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="16dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/people_black" />
+
+                                            <TextView
+                                                android:id="@+id/card_recommended_program_people"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="4dp"
+                                                android:layout_marginTop="4dp"
+                                                android:text="30~40명"
+                                                android:textColor="#000000"
+
+                                                android:textSize="8sp" />
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="8dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/time_black" />
+
+                                            <TextView
+                                                android:id="@+id/card_recommended_program_time"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="4dp"
+                                                android:layout_marginTop="4dp"
+                                                android:text="60분"
+                                                android:textColor="#000000"
+
+                                                android:textSize="8sp" />
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:id="@+id/card_recommended_program_price"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="16dp"
+                                            android:layout_marginTop="8dp"
+                                            android:ellipsize="end"
+                                            android:ems="6"
+                                            android:maxLines="1"
+                                            android:text="50,000원~"
+                                            android:textColor="#000000"
+                                            android:textSize="14sp"
+
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
                             </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
 
 
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/card_recommended_program"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="8dp">
+                        </androidx.cardview.widget.CardView>
 
-                    <!--sample-->
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:orientation="vertical">
+                        <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/card_recommended_program"
+                            android:layout_width="wrap_content"
+                            android:layout_height="200dp"
+                            android:layout_margin="8dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="8dp">
 
-                        <LinearLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content">
-
-                            <com.makeramen.roundedimageview.RoundedImageView
-                                android:id="@+id/card_recommended_program_background"
-                                android:layout_width="fill_parent"
-                                android:layout_height="120dp"
-                                android:layout_weight="0.8"
-                                android:background="@drawable/card_recommended_program_sample1"
-                                android:scaleType="centerCrop"
-                                app:riv_corner_radius_top_left="15dp"
-
-                                app:riv_corner_radius_top_right="15dp" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="fill_parent"
-                            android:orientation="vertical"
-                            >
+                            <!--sample-->
                             <LinearLayout
                                 android:layout_width="fill_parent"
                                 android:layout_height="fill_parent"
                                 android:orientation="vertical">
-                                <TextView
-                                    android:id="@+id/card_recommended_program_title"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textColor="#000000"
-                                    android:textSize="12sp"
-                                    android:textStyle="bold"
-                                    android:layout_marginLeft="16dp"
-                                    android:layout_marginTop="8dp"
-                                    android:ems="7"
-                                    android:maxLines="1"
-                                    android:ellipsize="end"
-
-                                    android:text="네온사인 만들기"/>
 
                                 <LinearLayout
                                     android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
+                                    android:layout_height="wrap_content">
 
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/people_black"
-                                        android:layout_marginLeft="16dp"
-                                        android:layout_marginTop="4dp"
-                                        />
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        android:id="@+id/card_recommended_program_background"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="120dp"
+                                        android:layout_weight="0.8"
+                                        android:background="@drawable/card_recommended_program_sample1"
+                                        android:scaleType="centerCrop"
+                                        app:riv_corner_radius_top_left="15dp"
 
-                                    <TextView
-                                        android:id="@+id/card_recommended_program_people"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginLeft="4dp"
-                                        android:layout_marginTop="4dp"
-                                        android:textSize="8sp"
-                                        android:textColor="#000000"
-
-                                        android:text="30~40명"
-                                        />
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/time_black"
-                                        android:layout_marginLeft="8dp"
-                                        android:layout_marginTop="4dp"
-                                        />
-
-                                    <TextView
-                                        android:id="@+id/card_recommended_program_time"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginLeft="4dp"
-                                        android:layout_marginTop="4dp"
-                                        android:textSize="8sp"
-                                        android:textColor="#000000"
-
-                                        android:text="60분"
-                                        />
+                                        app:riv_corner_radius_top_right="15dp" />
                                 </LinearLayout>
-                                <TextView
-                                    android:id="@+id/card_recommended_program_price"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textColor="#000000"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold"
-                                    android:layout_marginLeft="16dp"
-                                    android:layout_marginTop="8dp"
-                                    android:ems="6"
-                                    android:maxLines="1"
-                                    android:ellipsize="end"
 
-                                    android:text="50,000원~"/>
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/card_recommended_program_title"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="16dp"
+                                            android:layout_marginTop="8dp"
+                                            android:ellipsize="end"
+                                            android:ems="7"
+                                            android:maxLines="1"
+                                            android:text="네온사인 만들기"
+                                            android:textColor="#000000"
+                                            android:textSize="12sp"
+
+                                            android:textStyle="bold" />
+
+                                        <LinearLayout
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="16dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/people_black" />
+
+                                            <TextView
+                                                android:id="@+id/card_recommended_program_people"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="4dp"
+                                                android:layout_marginTop="4dp"
+                                                android:text="30~40명"
+                                                android:textColor="#000000"
+
+                                                android:textSize="8sp" />
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="8dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/time_black" />
+
+                                            <TextView
+                                                android:id="@+id/card_recommended_program_time"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="4dp"
+                                                android:layout_marginTop="4dp"
+                                                android:text="60분"
+                                                android:textColor="#000000"
+
+                                                android:textSize="8sp" />
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:id="@+id/card_recommended_program_price"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="16dp"
+                                            android:layout_marginTop="8dp"
+                                            android:ellipsize="end"
+                                            android:ems="6"
+                                            android:maxLines="1"
+                                            android:text="50,000원~"
+                                            android:textColor="#000000"
+                                            android:textSize="14sp"
+
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
                             </LinearLayout>
-                        </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
                     </LinearLayout>
+                </HorizontalScrollView>
+
+                <!--...........................................................-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="24dp"
+                        android:text="추천 맛집"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:id="@+id/recommended_food_details"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/arrow_right_black" />
+
+                </LinearLayout>
+
+                <!--spinner-->
+
+                <!--카드: java로 다시 구현 예정-->
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/recommended_food_cards"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/card_recommended_food"
+                            android:layout_width="wrap_content"
+                            android:layout_height="200dp"
+                            android:layout_margin="8dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="8dp">
+
+                            <!--sample-->
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        android:id="@+id/card_recommended_food_background"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="120dp"
+                                        android:layout_weight="0.8"
+                                        android:background="@drawable/card_recommended_program_sample1"
+                                        android:scaleType="centerCrop"
+                                        app:riv_corner_radius_top_left="15dp"
+
+                                        app:riv_corner_radius_top_right="15dp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/card_recommended_food_title"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="16dp"
+                                            android:layout_marginTop="8dp"
+                                            android:ellipsize="end"
+                                            android:ems="7"
+                                            android:maxLines="1"
+                                            android:text="상호명"
+                                            android:textColor="#000000"
+                                            android:textSize="12sp"
+
+                                            android:textStyle="bold" />
+
+                                        <LinearLayout
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="16dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/star_gray" />
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="2dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/star_gray" />
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="2dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/star_gray" />
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="2dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/star_gray" />
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="2dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/star_gray" />
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:id="@+id/card_recommended_program_price"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="16dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginRight="16dp"
+                                            android:ellipsize="end"
+                                            android:ems="8"
+                                            android:maxLines="1"
+                                            android:text="서울시 서초구 우면동 12번지 34-56"
+                                            android:textColor="#000000"
+
+                                            android:textSize="11sp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
 
 
-                </androidx.cardview.widget.CardView>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/card_recommended_food"
+                            android:layout_width="wrap_content"
+                            android:layout_height="200dp"
+                            android:layout_margin="8dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="8dp">
+
+                            <!--sample-->
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        android:id="@+id/card_recommended_food_background"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="120dp"
+                                        android:layout_weight="0.8"
+                                        android:background="@drawable/card_recommended_program_sample1"
+                                        android:scaleType="centerCrop"
+                                        app:riv_corner_radius_top_left="15dp"
+
+                                        app:riv_corner_radius_top_right="15dp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/card_recommended_food_title"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="16dp"
+                                            android:layout_marginTop="8dp"
+                                            android:ellipsize="end"
+                                            android:ems="7"
+                                            android:maxLines="1"
+                                            android:text="상호명"
+                                            android:textColor="#000000"
+                                            android:textSize="12sp"
+
+                                            android:textStyle="bold" />
+
+                                        <LinearLayout
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="16dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/star_gray" />
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="2dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/star_gray" />
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="2dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/star_gray" />
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="2dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/star_gray" />
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="2dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/star_gray" />
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:id="@+id/card_recommended_program_price"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="16dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginRight="16dp"
+                                            android:ellipsize="end"
+                                            android:ems="8"
+                                            android:maxLines="1"
+                                            android:text="서울시 서초구 우면동 12번지 34-56"
+                                            android:textColor="#000000"
+
+                                            android:textSize="11sp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/card_recommended_food"
+                            android:layout_width="wrap_content"
+                            android:layout_height="200dp"
+                            android:layout_margin="8dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="8dp">
+
+                            <!--sample-->
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        android:id="@+id/card_recommended_food_background"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="120dp"
+                                        android:layout_weight="0.8"
+                                        android:background="@drawable/card_recommended_program_sample1"
+                                        android:scaleType="centerCrop"
+                                        app:riv_corner_radius_top_left="15dp"
+
+                                        app:riv_corner_radius_top_right="15dp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/card_recommended_food_title"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="16dp"
+                                            android:layout_marginTop="8dp"
+                                            android:ellipsize="end"
+                                            android:ems="7"
+                                            android:maxLines="1"
+                                            android:text="상호명"
+                                            android:textColor="#000000"
+                                            android:textSize="12sp"
+
+                                            android:textStyle="bold" />
+
+                                        <LinearLayout
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="16dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/star_gray" />
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="2dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/star_gray" />
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="2dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/star_gray" />
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="2dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/star_gray" />
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="2dp"
+                                                android:layout_marginTop="4dp"
+                                                android:background="@drawable/star_gray" />
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:id="@+id/card_recommended_program_price"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="16dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginRight="16dp"
+                                            android:ellipsize="end"
+                                            android:ems="8"
+                                            android:maxLines="1"
+                                            android:text="서울시 서초구 우면동 12번지 34-56"
+                                            android:textColor="#000000"
+
+                                            android:textSize="11sp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </ScrollView>
+
             </LinearLayout>
-        </HorizontalScrollView>
-
-        <!--...........................................................-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="24dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="24dp"
-                android:text="추천 맛집"
-                android:textSize="18sp"
-                android:textColor="#000000"
-                android:textStyle="bold"
-                />
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                />
-
-            <ImageButton
-                android:id="@+id/recommended_food_details"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginRight="16dp"
-                android:background="@drawable/arrow_right_black" />
-
         </LinearLayout>
-
-        <!--spinner-->
-
-        <!--카드: java로 다시 구현 예정-->
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:id="@+id/recommended_food_cards"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/card_recommended_food"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="8dp">
-
-                    <!--sample-->
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content">
-
-                            <com.makeramen.roundedimageview.RoundedImageView
-                                android:id="@+id/card_recommended_food_background"
-                                android:layout_width="fill_parent"
-                                android:layout_height="120dp"
-                                android:layout_weight="0.8"
-                                android:background="@drawable/card_recommended_program_sample1"
-                                android:scaleType="centerCrop"
-                                app:riv_corner_radius_top_left="15dp"
-
-                                app:riv_corner_radius_top_right="15dp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="fill_parent"
-                            android:orientation="vertical"
-                            >
-                            <LinearLayout
-                                android:layout_width="fill_parent"
-                                android:layout_height="fill_parent"
-                                android:orientation="vertical">
-                                <TextView
-                                    android:id="@+id/card_recommended_food_title"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textColor="#000000"
-                                    android:textSize="12sp"
-                                    android:textStyle="bold"
-                                    android:layout_marginLeft="16dp"
-                                    android:layout_marginTop="8dp"
-                                    android:ems="7"
-                                    android:maxLines="1"
-                                    android:ellipsize="end"
-
-                                    android:text="상호명"/>
-
-                                <LinearLayout
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/star_gray"
-                                        android:layout_marginLeft="16dp"
-                                        android:layout_marginTop="4dp"
-                                        />
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/star_gray"
-                                        android:layout_marginLeft="2dp"
-                                        android:layout_marginTop="4dp"
-                                        />
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/star_gray"
-                                        android:layout_marginLeft="2dp"
-                                        android:layout_marginTop="4dp"
-                                        />
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/star_gray"
-                                        android:layout_marginLeft="2dp"
-                                        android:layout_marginTop="4dp"
-                                        />
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/star_gray"
-                                        android:layout_marginLeft="2dp"
-                                        android:layout_marginTop="4dp"
-                                        />
-                                </LinearLayout>
-
-                                <TextView
-                                    android:id="@+id/card_recommended_program_price"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textColor="#000000"
-                                    android:textSize="11sp"
-                                    android:layout_marginLeft="16dp"
-                                    android:layout_marginRight="16dp"
-                                    android:layout_marginTop="8dp"
-                                    android:ems="8"
-                                    android:maxLines="1"
-                                    android:ellipsize="end"
-
-                                    android:text="서울시 서초구 우면동 12번지 34-56"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/card_recommended_food"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="8dp">
-
-                    <!--sample-->
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content">
-
-                            <com.makeramen.roundedimageview.RoundedImageView
-                                android:id="@+id/card_recommended_food_background"
-                                android:layout_width="fill_parent"
-                                android:layout_height="120dp"
-                                android:layout_weight="0.8"
-                                android:background="@drawable/card_recommended_program_sample1"
-                                android:scaleType="centerCrop"
-                                app:riv_corner_radius_top_left="15dp"
-
-                                app:riv_corner_radius_top_right="15dp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="fill_parent"
-                            android:orientation="vertical"
-                            >
-                            <LinearLayout
-                                android:layout_width="fill_parent"
-                                android:layout_height="fill_parent"
-                                android:orientation="vertical">
-                                <TextView
-                                    android:id="@+id/card_recommended_food_title"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textColor="#000000"
-                                    android:textSize="12sp"
-                                    android:textStyle="bold"
-                                    android:layout_marginLeft="16dp"
-                                    android:layout_marginTop="8dp"
-                                    android:ems="7"
-                                    android:maxLines="1"
-                                    android:ellipsize="end"
-
-                                    android:text="상호명"/>
-
-                                <LinearLayout
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/star_gray"
-                                        android:layout_marginLeft="16dp"
-                                        android:layout_marginTop="4dp"
-                                        />
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/star_gray"
-                                        android:layout_marginLeft="2dp"
-                                        android:layout_marginTop="4dp"
-                                        />
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/star_gray"
-                                        android:layout_marginLeft="2dp"
-                                        android:layout_marginTop="4dp"
-                                        />
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/star_gray"
-                                        android:layout_marginLeft="2dp"
-                                        android:layout_marginTop="4dp"
-                                        />
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/star_gray"
-                                        android:layout_marginLeft="2dp"
-                                        android:layout_marginTop="4dp"
-                                        />
-                                </LinearLayout>
-
-                                <TextView
-                                    android:id="@+id/card_recommended_program_price"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textColor="#000000"
-                                    android:textSize="11sp"
-                                    android:layout_marginLeft="16dp"
-                                    android:layout_marginRight="16dp"
-                                    android:layout_marginTop="8dp"
-                                    android:ems="8"
-                                    android:maxLines="1"
-                                    android:ellipsize="end"
-
-                                    android:text="서울시 서초구 우면동 12번지 34-56"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/card_recommended_food"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="15dp"
-                    app:cardElevation="8dp">
-
-                    <!--sample-->
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content">
-
-                            <com.makeramen.roundedimageview.RoundedImageView
-                                android:id="@+id/card_recommended_food_background"
-                                android:layout_width="fill_parent"
-                                android:layout_height="120dp"
-                                android:layout_weight="0.8"
-                                android:background="@drawable/card_recommended_program_sample1"
-                                android:scaleType="centerCrop"
-                                app:riv_corner_radius_top_left="15dp"
-
-                                app:riv_corner_radius_top_right="15dp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="fill_parent"
-                            android:layout_height="fill_parent"
-                            android:orientation="vertical"
-                            >
-                            <LinearLayout
-                                android:layout_width="fill_parent"
-                                android:layout_height="fill_parent"
-                                android:orientation="vertical">
-                                <TextView
-                                    android:id="@+id/card_recommended_food_title"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textColor="#000000"
-                                    android:textSize="12sp"
-                                    android:textStyle="bold"
-                                    android:layout_marginLeft="16dp"
-                                    android:layout_marginTop="8dp"
-                                    android:ems="7"
-                                    android:maxLines="1"
-                                    android:ellipsize="end"
-
-                                    android:text="상호명"/>
-
-                                <LinearLayout
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/star_gray"
-                                        android:layout_marginLeft="16dp"
-                                        android:layout_marginTop="4dp"
-                                        />
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/star_gray"
-                                        android:layout_marginLeft="2dp"
-                                        android:layout_marginTop="4dp"
-                                        />
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/star_gray"
-                                        android:layout_marginLeft="2dp"
-                                        android:layout_marginTop="4dp"
-                                        />
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/star_gray"
-                                        android:layout_marginLeft="2dp"
-                                        android:layout_marginTop="4dp"
-                                        />
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@drawable/star_gray"
-                                        android:layout_marginLeft="2dp"
-                                        android:layout_marginTop="4dp"
-                                        />
-                                </LinearLayout>
-
-                                <TextView
-                                    android:id="@+id/card_recommended_program_price"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:textColor="#000000"
-                                    android:textSize="11sp"
-                                    android:layout_marginLeft="16dp"
-                                    android:layout_marginRight="16dp"
-                                    android:layout_marginTop="8dp"
-                                    android:ems="8"
-                                    android:maxLines="1"
-                                    android:ellipsize="end"
-
-                                    android:text="서울시 서초구 우면동 12번지 34-56"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
-        </ScrollView>
-
     </LinearLayout>
+
+    </ScrollView>
 </LinearLayout>

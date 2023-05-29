@@ -23,7 +23,6 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.wtViewHolder> 
         data1=s1;
         data2=s2;
         images=img;
-
     }
 
     @NonNull
