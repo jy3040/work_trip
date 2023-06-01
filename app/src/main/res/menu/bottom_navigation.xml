@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/home_gray"
+        android:enabled="true"
+        android:title="HOME"/>
+
+    <item
+        android:id="@+id/action_plan"
+        android:icon="@drawable/plan_gray"
+        android:enabled="true"
+        android:title="PLAN"/>
+
+    <item
+        android:id="@+id/action_community"
+        android:icon="@drawable/commu_gray"
+        android:enabled="true"
+        android:title="COMMUNITY"/>
+
+    <item
+        android:id="@+id/action_my"
+        android:icon="@drawable/my_gray"
+        android:enabled="true"
+        android:title="MY"/>
+
+</menu>

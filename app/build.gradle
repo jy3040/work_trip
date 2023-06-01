@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.work_trip"
-        minSdk 30
+        minSdk 28
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -29,6 +29,10 @@ android {
 
     buildFeatures {
         dataBinding true
+    }
+
+    viewBinding {
+        enabled true
     }
 }
 

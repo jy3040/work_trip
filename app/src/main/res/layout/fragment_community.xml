@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment_community">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <ImageView
+                android:layout_width="102dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/logo1" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+
+            <ImageButton
+                android:id="@+id/main_notification"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/notifications_blue"/>
+        </LinearLayout>
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="52dp"
+            android:layout_marginTop="10dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_theme1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:background="@drawable/line2_round_21"
+                    android:text="#독서"
+                    android:textStyle="bold"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_theme2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:background="@drawable/line2_round_21"
+                    android:text="#독서"
+                    android:textStyle="bold"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_theme3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/line2_round_21"
+                    android:text="#독서"
+                    android:textStyle="bold"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_theme4"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/line2_round_21"
+                    android:text="#독서"
+                    android:textStyle="bold"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_theme5"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/line2_round_21"
+                    android:text="#독서"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+<!--카드 자리-->
+
+
+    </LinearLayout>
+
+</FrameLayout>
