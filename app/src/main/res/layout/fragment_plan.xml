@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment_plan">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/plan_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            android:maxLines="1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="일정"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/plan_add"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/addbox_black"
+            android:layout_marginHorizontal="8dp"
+            android:layout_gravity="bottom"/>
+
+        <ImageButton
+            android:id="@+id/plan_setting"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/settings_black"
+            android:layout_marginHorizontal="8dp"
+            android:layout_gravity="bottom"/>
+
+        <ImageButton
+            android:id="@+id/plan_list"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/list_black"
+            android:layout_marginHorizontal="8dp"
+            android:layout_gravity="bottom"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="16dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:text="아직 등록된 일정이 없어요."
+            android:layout_marginVertical="32dp"/>
+
+        <android.widget.Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/frame_background"
+            android:backgroundTint="@color/main_blue"
+            android:text="일정 추가"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="24dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -80,7 +80,7 @@
                                 android:layout_width="280dp"
                                 android:layout_height="40dp"
                                 android:background="@drawable/frame_background"
-                                android:gravity="left||center"
+                                android:gravity="left|center"
                                 android:hint="어디로 워크숍 가시나요?"
                                 android:paddingHorizontal="20dp"
                                 android:drawableRight="@drawable/search_icon_size"/>
