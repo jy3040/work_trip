@@ -16,67 +16,91 @@
             android:textStyle="bold"
             android:textColor="#323232"
             android:layout_gravity="center"
-            android:layout_marginTop="52dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="테마"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="#323232"
-            android:layout_marginLeft="52dp"
-            android:layout_marginTop="22dp"/>
+            android:layout_marginTop="252dp"/>
         <HorizontalScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="52dp"
-            android:layout_marginTop="10dp">
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="50dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_theme1"
+                <RadioGroup
+                    android:id="@+id/thema"
                     android:layout_width="wrap_content"
-                    android:layout_height="32dp"
-                    android:background="@drawable/line2_round_21"
-                    android:text="#독서"
-                    android:textStyle="bold"/>
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_theme2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="32dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/line2_round_21"
-                    android:text="#독서"
-                    android:textStyle="bold"/>
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_theme3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="32dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/line2_round_21"
-                    android:text="#독서"
-                    android:textStyle="bold"/>
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_theme4"
-                    android:layout_width="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_height="32dp"
-                    android:background="@drawable/line2_round_21"
-                    android:text="#독서"
-                    android:textStyle="bold"/>
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_theme5"
-                    android:layout_width="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_height="32dp"
-                    android:background="@drawable/line2_round_21"
-                    android:text="#독서"
-                    android:textStyle="bold"/>
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/thema1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:paddingHorizontal="10dp"
+                        android:background="@drawable/sign_up_check_style1"
+                        android:text="활동적인"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/sign_up_textcolor1"
+                        android:button="@null" />
+
+                    <RadioButton
+                        android:id="@+id/thema2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/sign_up_check_style1"
+                        android:text="탐구적인"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/sign_up_textcolor1"
+                        android:button="@null" />
+
+                    <RadioButton
+                        android:id="@+id/thema3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/sign_up_check_style1"
+                        android:text="정적인"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/sign_up_textcolor1"
+                        android:button="@null" />
+
+                    <RadioButton
+                        android:id="@+id/thema4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/sign_up_check_style1"
+                        android:text="활동적인"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/sign_up_textcolor1"
+                        android:button="@null" />
+
+                    <RadioButton
+                        android:id="@+id/thema5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/sign_up_check_style1"
+                        android:text="활동적인"
+                        android:textAlignment="center"
+                        android:textColor="@drawable/sign_up_textcolor1"
+                        android:button="@null" />
+
+                </RadioGroup>
             </LinearLayout>
+
         </HorizontalScrollView>
 
+        <ImageButton
+            android:id="@+id/ib_next"
+            android:layout_width="320dp"
+            android:layout_height="56.5dp"
+            android:background="@drawable/sign_up_button_style1"
+            android:layout_gravity="center"
+            android:layout_marginTop="260dp"/>
     </LinearLayout>
 </layout>

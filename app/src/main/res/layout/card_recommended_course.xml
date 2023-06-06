@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="298dp"
+    android:layout_height="156dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_recommended_course"
     android:layout_margin="8dp"
     app:cardCornerRadius="15dp"
@@ -11,12 +12,13 @@
     <!--sample-->
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/card_recommended_course_background"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        app:riv_corner_radius="15dp"/>
-        <!--android:background="@drawable/card_recommended_course_sample1"-->
-    
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        app:riv_corner_radius="15dp"
+
+        android:background="@drawable/card_recommended_course_sample1"/>
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -27,9 +29,9 @@
             android:id="@+id/card_recommended_course_subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="16dp"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:textSize="13sp"
             android:ems="16"
             android:maxLines="1"
@@ -41,10 +43,10 @@
             android:id="@+id/card_recommended_course_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:layout_marginLeft="16dp"
+            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="4dp"
             android:ems="15"
             android:maxLines="1"
@@ -52,9 +54,13 @@
 
             <!--android:text="강원도 힐링 워크숍 떠나기"-->
 
+
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginHorizontal="16dp"
             android:orientation="horizontal">
 
             <View
@@ -63,28 +69,54 @@
                 android:layout_weight="1"
                 />
 
-            <ImageView
+            <TextView
+                android:id="@+id/card_recommended_course_tag1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/sample1"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="60dp"
-                android:layout_marginRight="4dp"/>
+                android:textColor="@color/black"
+                android:textSize="9sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="8dp"
+                android:layout_marginHorizontal="2dp"
 
-            <ImageView
+                android:background="@drawable/frame_background"
+
+                tools:text="#1-2박"/>
+
+            <TextView
+                android:id="@+id/card_recommended_course_tag2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/sample2"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="60dp"
-                android:layout_marginRight="4dp"/>
-            <ImageView
+                android:textColor="@color/black"
+                android:textSize="9sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="8dp"
+                android:layout_marginHorizontal="2dp"
+
+                android:background="@drawable/frame_background"
+
+                tools:text="#활동적"/>
+
+            <TextView
+                android:id="@+id/card_recommended_course_tag3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/sample3"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="60dp"
-                android:layout_marginRight="16dp"/>
+                android:textColor="@color/black"
+                android:textSize="9sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:paddingVertical="2dp"
+                android:paddingHorizontal="8dp"
+                android:layout_marginHorizontal="2dp"
+
+                android:background="@drawable/frame_background"
+
+                tools:text="#단합"/>
+
 
         </LinearLayout>
     </LinearLayout>

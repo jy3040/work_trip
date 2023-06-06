@@ -86,7 +86,7 @@
                     android:id="@+id/ib_pw1_visibility"
                     android:layout_width="15dp"
                     android:layout_height="15dp"
-                    android:background="@drawable/visible1"
+                    android:background="@drawable/sign_up_passwordhide_style"
                     android:layout_gravity="center"
                     android:layout_marginLeft="13dp"/>
             </LinearLayout>
@@ -132,7 +132,7 @@
                     android:id="@+id/ib_pw2_visibility"
                     android:layout_width="15dp"
                     android:layout_height="15dp"
-                    android:background="@drawable/visible1"
+                    android:background="@drawable/sign_up_passwordhide_style"
                     android:layout_gravity="center"
                     android:layout_marginLeft="13dp"/>
             </LinearLayout>

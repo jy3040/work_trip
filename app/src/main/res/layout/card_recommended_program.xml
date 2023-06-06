@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="144dp"
     android:layout_height="200dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_recommended_program"
@@ -23,7 +23,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="120dp"
                 android:layout_weight="0.8"
-                android:background="@drawable/card_recommended_program_sample1"
+                android:background="@drawable/card_recommended_bgsample"
                 android:scaleType="centerCrop"
                 app:riv_corner_radius_top_left="15dp"
 
@@ -43,12 +43,12 @@
                 android:id="@+id/card_recommended_program_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                android:layout_marginLeft="16dp"
+                android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="8dp"
-                android:ems="7"
+                android:ems="9"
                 android:maxLines="1"
                 android:ellipsize="end"
 
@@ -57,13 +57,13 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="16dp">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
                     android:background="@drawable/people_black"
-                    android:layout_marginLeft="16dp"
                     android:layout_marginTop="4dp"
                     />
 
@@ -74,14 +74,14 @@
                     android:layout_marginLeft="4dp"
                     android:layout_marginTop="4dp"
                     android:textSize="8sp"
-                    android:textColor="#000000"
+                    android:textColor="@color/black"
 
                     android:text="30~40명"
                     />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
                     android:background="@drawable/time_black"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="4dp"
@@ -94,7 +94,7 @@
                     android:layout_marginLeft="4dp"
                     android:layout_marginTop="4dp"
                     android:textSize="8sp"
-                    android:textColor="#000000"
+                    android:textColor="@color/black"
 
                     android:text="60분"
                     />
@@ -103,10 +103,10 @@
             android:id="@+id/card_recommended_program_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"
-            android:layout_marginLeft="16dp"
+            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="8dp"
             android:ems="6"
             android:maxLines="1"
