@@ -1,10 +1,19 @@
 package com.example.work_trip;
 
+import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,7 +23,12 @@ import android.view.ViewGroup;
  */
 public class fragment_home extends Fragment {
 
-   // TODO: Rename parameter arguments, choose names that match
+    //버튼 포함 변수 선언
+    private ViewGroup rootView;
+    private LinearLayout card_recommended_course_;
+
+
+    // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -57,7 +71,23 @@ public class fragment_home extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        rootView = (ViewGroup)inflater.inflate(R.layout.fragment_home, container, false);
+
+        card_recommended_course_ = rootView.findViewById(R.id.card_recommended_course1);
+
+
+
+        //카드 클릭 intent (fragment->activity)
+        card_recommended_course_.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //fragment라 activity intent와는 다른 방식
+                Intent intent = new Intent(getActivity(), CardDetailActivity.class);
+                startActivity(intent);
+
+            }
+        });
+        return rootView;
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
     }
 }

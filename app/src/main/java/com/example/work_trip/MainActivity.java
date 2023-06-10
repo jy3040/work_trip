@@ -3,6 +3,7 @@ package com.example.work_trip;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,11 +18,14 @@ public class MainActivity extends AppCompatActivity {
     //네비게이션바 변수
     BottomNavigationView bottomNavigationView;
 
-    //fragment 변수
+    //fragment 변수(기본)
     Fragment fragment_home;
     Fragment fragment_plan;
     Fragment fragment_community;
     Fragment fragment_my;
+
+    //fragment 변수(추가)
+    Fragment fragment_plan_add;
 
 
     //리사이클러뷰 변수
@@ -51,11 +55,12 @@ public class MainActivity extends AppCompatActivity {
 
         CardAdapter adapter=new CardAdapter(this, s1, s2, images);*/
 
-        //fragment 생성
+        //fragment 객체생성
         fragment_home=new fragment_home();
         fragment_plan=new fragment_plan();
         fragment_community=new fragment_community();
         fragment_my=new fragment_my();
+        //fragment_plan_add=new fragment_plan_add();
 
 
         //네비게이션바
@@ -65,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                //Log.i(tag, "바텀 네비게이션 클릭");
 
                 switch (item.getItemId())
                 {

@@ -34,6 +34,13 @@
         <activity
             android:name=".MainActivity"
             android:exported="false"></activity>
+        <activity
+            android:name=".planAddActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".CardDetailActivity"
+            android:exported="false"></activity>
+
     </application>
 
 </manifest>

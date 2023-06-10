@@ -1,9 +1,15 @@
 package com.example.work_trip;
 
+import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
+
 import androidx.fragment.app.Fragment;
 
 /**
@@ -13,6 +19,12 @@ import androidx.fragment.app.Fragment;
  */
 
 public class fragment_plan extends Fragment {
+    //버튼 포함 변수 선언
+    private ViewGroup rootView;
+    private ImageButton planAdd;
+    private Button planAdd2;
+
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -57,6 +69,36 @@ public class fragment_plan extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_plan, container, false);
+        //return inflater.inflate(R.layout.fragment_plan, container, false);
+
+        rootView = (ViewGroup)inflater.inflate(R.layout.fragment_plan,container,false);
+
+        planAdd = rootView.findViewById(R.id.plan_add);
+        planAdd2 = rootView.findViewById(R.id.plan_add_2);
+
+
+        //버튼 클릭 intent (fragment->activity)
+        planAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //fragment라 activity intent와는 다른 방식
+                Intent intent = new Intent(getActivity(), planAddActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        planAdd2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //fragment라 activity intent와는 다른 방식
+                Intent intent = new Intent(getActivity(), planAddActivity.class);
+                //intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+
+            }
+        });
+        return rootView;
+
     }
 }
