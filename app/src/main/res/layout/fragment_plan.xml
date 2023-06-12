@@ -63,7 +63,86 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:layout_marginHorizontal="16dp">
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="24dp">
+
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="128dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/card_added_plan"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="21dp"
+            app:cardElevation="8dp"
+            android:layout_marginVertical="20dp"
+            android:visibility="gone"
+            >
+
+            <com.makeramen.roundedimageview.RoundedImageView
+
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY"
+                app:riv_corner_radius="21dp"
+                android:background="@drawable/line2_round_21"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="20dp"
+                >
+
+
+                <TextView
+                    android:id="@+id/added_period"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="9sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:paddingVertical="2dp"
+                    android:paddingHorizontal="8dp"
+                    android:layout_marginHorizontal="2dp"
+
+                    android:background="@drawable/frame_background"
+                    android:backgroundTint="@color/main_blue_light"
+
+                    tools:text="datddatd"/>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginVertical="16dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/added_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:text="일정명"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ImageButton
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/arrow_right_black" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <View
             android:layout_width="0dp"
@@ -77,7 +156,9 @@
             android:textStyle="bold"
             android:layout_gravity="center"
             android:text="아직 등록된 일정이 없어요."
-            android:layout_marginVertical="32dp"/>
+            android:layout_marginVertical="32dp"
+            android:id="@+id/not_yet_plan"
+            android:visibility="visible"/>
 
         <android.widget.Button
             android:id="@+id/plan_add_2"
@@ -90,7 +171,8 @@
             android:textColor="@color/white"
             android:textSize="14sp"
             android:paddingVertical="2dp"
-            android:paddingHorizontal="24dp"/>
+            android:paddingHorizontal="24dp"
+            android:visibility="visible"/>
 
         <View
             android:layout_width="0dp"

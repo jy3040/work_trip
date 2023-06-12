@@ -9,8 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+
+import org.w3c.dom.Text;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,9 +62,33 @@ public class fragment_plan extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+
+        //일정 추가 후
+        //데이터 안 받아와짐
+        if (getArguments() != null)
+        {
+            //값 받아오기
+            String getName = getArguments().getString("name");
+            String getPeriod = getArguments().getString("period");
+
+            //변수 선언
+            androidx.cardview.widget.CardView cardAdded = rootView.findViewById(R.id.card_added_plan);
+            TextView notYet = rootView.findViewById(R.id.not_yet_plan);
+            TextView addButton = rootView.findViewById(R.id.plan_add_2);
+
+            //카드 보이게
+            cardAdded.setVisibility(View.VISIBLE);
+
+            TextView addedPeriod=rootView.findViewById(R.id.added_period);
+            TextView addedTitle=rootView.findViewById(R.id.added_title);
+
+            addedPeriod.setText(getPeriod);
+            addedTitle.setText(getName);
+
+            //나머지 안 보이게
+            notYet.setVisibility(View.GONE);
+            addButton.setVisibility(View.GONE);
+
         }
     }
 
@@ -73,6 +100,7 @@ public class fragment_plan extends Fragment {
 
         rootView = (ViewGroup)inflater.inflate(R.layout.fragment_plan,container,false);
 
+        //버튼
         planAdd = rootView.findViewById(R.id.plan_add);
         planAdd2 = rootView.findViewById(R.id.plan_add_2);
 
@@ -97,6 +125,7 @@ public class fragment_plan extends Fragment {
                 startActivity(intent);
 
             }
+
         });
         return rootView;
 
