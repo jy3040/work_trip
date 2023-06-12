@@ -3,6 +3,7 @@ package com.example.work_trip;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class DBHelper extends SQLiteOpenHelper {
     public DBHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
@@ -11,16 +12,31 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE if not exists mytable ("
-                + "_id integer primary key autoincrement,"
-                + "txt text);";
+
+        String sql = "CREATE TABLE if not exists members ("
+                + "member_num integer primary key autoincrement,"
+                + "id text,"
+                + "password text,"
+                + "name text,"
+                + "birth text,"
+                + "email text,"
+                + "company text,"
+                + "department text,"
+                + "position text,"
+                + "thema text);";
+
 
         db.execSQL(sql);
+        Log.d("DB", "table이 생성되었습니다.");
+        Log.d("DB", db.toString());
+
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String sql = "DROP TABLE if exists mytable";
+        String sql = "DROP TABLE if exists members";
+        Log.d("DB", "table이 삭제되었습니다.");
 
         db.execSQL(sql);
         onCreate(db);

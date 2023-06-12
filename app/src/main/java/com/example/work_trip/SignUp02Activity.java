@@ -34,7 +34,6 @@ public class SignUp02Activity extends AppCompatActivity  implements View.OnClick
 
         binding.etEmail.addTextChangedListener(textWatcher);
 
-        binding.ibEmailCheck.setOnClickListener(this);
         binding.ibNext.setOnClickListener(this);
     }
 
@@ -42,12 +41,10 @@ public class SignUp02Activity extends AppCompatActivity  implements View.OnClick
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.ib_next:
-                if(!(binding.etName.getText().toString().equals("")) && !(binding.etBirth.getText().toString().equals("")) && !(binding.etEmail.getText().toString().equals(""))){
+                if(!(binding.etName.getText().toString().equals("")) && !(binding.etBirth.getText().toString().equals("")) && (binding.tvEmailError.getText().toString().equals("올바른 이메일 입니다."))){
 
-                    Log.d("Yerim", binding.etName.getText().toString());
-                    Log.d("Yerim", binding.etBirth.getText().toString());
 
-                    Intent it = new Intent(this, SignUp03Activity.class);
+                    Intent it = new Intent(this, SignUp02_1Activity.class);
                     it.putExtra("id", id);
                     it.putExtra("password",password);
                     it.putExtra("name", binding.etName.getText().toString());
@@ -58,10 +55,19 @@ public class SignUp02Activity extends AppCompatActivity  implements View.OnClick
                     finish();
                 }
                 else{
-                    Toast.makeText(this, "채워주세요",Toast.LENGTH_LONG);
+                    if((binding.etName.getText().toString().equals(""))){
+                        Toast.makeText(this, "이름을 입력해주세요",Toast.LENGTH_LONG).show();
+
+                    }
+                    else if((binding.etBirth.getText().toString().equals(""))){
+                        Toast.makeText(this, "생년월일을 입력해주세요",Toast.LENGTH_LONG).show();
+
+                    } else if (!(binding.tvEmailError.getText().toString().equals("올바른 이메일 입니다."))) {
+                        Toast.makeText(this, "이메일을 올바르게 입력해주세요",Toast.LENGTH_LONG).show();
+                    }
+
+
                 }
-                break;
-            case R.id.ib_email_check:
                 break;
 
 

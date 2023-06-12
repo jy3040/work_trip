@@ -12,19 +12,17 @@
         android:theme="@style/Theme.Work_trip"
         tools:targetApi="31">
         <activity
-            android:name=".SignUp04Activity"
+            android:name=".Community_writeActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUp03Activity"
+            android:name=".Community_postActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUp02Activity"
-            android:exported="false">
-        </activity>
+            android:name=".CustomDialog"
+            android:exported="false" />
         <activity
-            android:name=".SignUp01Activity"
+            android:name=".LoginActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,15 +30,29 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".SignUp02_1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUp04Activity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUp03Activity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUp02Activity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUp01Activity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".planAddActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".CardDetailActivity"
-            android:exported="false"></activity>
-
+            android:exported="false" />
     </application>
 
 </manifest>

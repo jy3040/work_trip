@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".SignUp02Activity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="200.35dp"
+                android:layout_height="55.46dp"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/logo1"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="49.75dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/line1_round_12">
+                <EditText
+                    android:id="@+id/et_id"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:hint="아이디"
+                    android:background="#FFFFFF"
+                    android:textColorHint="#9D9D9D"
+                    android:textSize="13sp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="24dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="49.75dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/line1_round_12">
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:hint="비밀번호"
+                    android:background="#FFFFFF"
+                    android:textColorHint="#9D9D9D"
+                    android:textSize="13sp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="24dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="52dp"
+                android:text=""
+                android:visibility="gone"
+                android:textSize="11sp"
+                android:textColor="#5D81FF"
+                android:layout_marginTop="7dp"/>
+
+            <Button
+                android:id="@+id/ib_next"
+                android:text="로그인"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="320dp"
+                android:layout_height="56.5dp"
+                android:background="@drawable/fill_round_21"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:id="@+id/tv_sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="회원가입하기"
+                android:textSize="15sp"
+                android:textColor="#5D81FF"
+                android:layout_marginTop="20dp"/>
+            
+            <View
+                android:layout_marginTop="7dp"
+                android:layout_width="70dp"
+                android:layout_height="3dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#5D81FF"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

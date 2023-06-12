@@ -8,6 +8,7 @@
         <item>산 좋고 물 좋은</item>
         <item>산 좋고 물 좋은</item>
     </string-array>
+    <string name="aa">#</string>
 
     <string-array name="card_recommended_course_name">
         <item>강원도 힐링 워크숍 떠나기</item>

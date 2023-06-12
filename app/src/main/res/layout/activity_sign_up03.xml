@@ -73,7 +73,7 @@
                         android:paddingHorizontal="10dp"
                         android:layout_marginLeft="15dp"
                         android:background="@drawable/sign_up_check_style1"
-                        android:text="활동적인"
+                        android:text="체험적인"
                         android:textAlignment="center"
                         android:textColor="@drawable/sign_up_textcolor1"
                         android:button="@null" />
@@ -85,7 +85,7 @@
                         android:paddingHorizontal="10dp"
                         android:layout_marginLeft="15dp"
                         android:background="@drawable/sign_up_check_style1"
-                        android:text="활동적인"
+                        android:text="학문적인"
                         android:textAlignment="center"
                         android:textColor="@drawable/sign_up_textcolor1"
                         android:button="@null" />

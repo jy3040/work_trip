@@ -480,7 +480,7 @@
 
                                                 android:background="@drawable/frame_background"
 
-                                                tools:text="#야외"/>
+                                                android:text="#야외"/>
 
                                             <TextView
                                                 android:id="@+id/card_recommended_course_tag3"

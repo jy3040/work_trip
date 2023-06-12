@@ -34,7 +34,7 @@ public class SignUp04Activity extends AppCompatActivity {
         binding.ibDone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(getApplicationContext(), MainActivity.class);
+                Intent it = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(it);
                 finish();
             }
