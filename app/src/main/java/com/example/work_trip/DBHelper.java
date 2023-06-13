@@ -1,6 +1,7 @@
 package com.example.work_trip;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -17,13 +18,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 + "member_num integer primary key autoincrement,"
                 + "id text,"
                 + "password text,"
-                + "name text,"
-                + "birth text,"
-                + "email text,"
-                + "company text,"
-                + "department text,"
-                + "position text,"
-                + "thema text);";
+                + "name text);";
 
 
         db.execSQL(sql);
@@ -41,4 +36,7 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL(sql);
         onCreate(db);
     }
+
+
+
 }

@@ -17,7 +17,7 @@ import android.widget.Toast;
 import com.example.work_trip.databinding.ActivitySignUp02Binding;
 import com.example.work_trip.databinding.ActivitySignUp03Binding;
 
-public class SignUp03Activity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
+public class SignUp03Activity extends AppCompatActivity implements View.OnClickListener {
 
     String id;
     String password;
@@ -36,6 +36,12 @@ public class SignUp03Activity extends AppCompatActivity implements RadioGroup.On
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_sign_up03);
 
+        binding.thema1.setOnClickListener(this);
+        binding.thema2.setOnClickListener(this);
+        binding.thema3.setOnClickListener(this);
+        binding.thema4.setOnClickListener(this);
+        binding.thema5.setOnClickListener(this);
+
         DBHelper helper;
         SQLiteDatabase db;
         helper = new DBHelper(this, "members.db", null, 1);
@@ -52,7 +58,6 @@ public class SignUp03Activity extends AppCompatActivity implements RadioGroup.On
         department = intent.getStringExtra("birth");
         position = intent.getStringExtra("email");
 
-        binding.thema.setOnCheckedChangeListener(this);
 
         binding.ibNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,6 +94,7 @@ public class SignUp03Activity extends AppCompatActivity implements RadioGroup.On
                             Log.d("DB",c.getString(2));
                             Log.d("DB",c.getString(3));
                         }
+                        db2.close();
 
                     }
                     catch (SQLException e){
@@ -107,18 +113,18 @@ public class SignUp03Activity extends AppCompatActivity implements RadioGroup.On
     }
 
     @Override
-    public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
-        switch (i){
-            case  R.id.thema1:
-                check_thema = binding.thema1.getText().toString();
-            case  R.id.thema2:
-                check_thema = binding.thema2.getText().toString();
-            case  R.id.thema3:
-                check_thema = binding.thema3.getText().toString();
-            case  R.id.thema4:
-                check_thema = binding.thema4.getText().toString();
-            case  R.id.thema5:
-                check_thema = binding.thema5.getText().toString();
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.thema1:
+                check_thema += binding.thema1.getText().toString() + " ";
+            case R.id.thema2:
+                check_thema += binding.thema2.getText().toString() + " ";
+            case R.id.thema3:
+                check_thema += binding.thema3.getText().toString() + " ";
+            case R.id.thema4:
+                check_thema += binding.thema4.getText().toString() + " ";
+            case R.id.thema5:
+                check_thema += binding.thema5.getText().toString() + " ";
         }
     }
 }

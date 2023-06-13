@@ -34,7 +34,7 @@
                 app:riv_corner_radius_top_right="15dp" />
 
             <TextView
-                android:id="@+id/tv_img"
+                android:id="@+id/tv_tag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
@@ -121,6 +121,13 @@
                         android:textSize="11sp"
 
                         android:text="000000원"/>
+                    <TextView
+                        android:id="@+id/tv_commu_contnet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:visibility="gone"
+                        android:text="000000원"/>
 
                 </LinearLayout>
 
@@ -134,7 +141,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/map_gray"
-                        android:layout_marginLeft="100dp"/>
+                        android:layout_marginLeft="130dp"/>
                     <TextView
                         android:id="@+id/tv_commu_trip"
                         android:layout_width="wrap_content"
@@ -144,21 +151,6 @@
                         android:textSize="10sp"
 
                         android:text="1박 2일"/>
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/filter_gray"
-                        android:layout_gravity="center"/>
-                    <TextView
-                        android:id="@+id/tv_commu_program"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="2dp"
-                        android:layout_marginRight="10dp"
-                        android:textSize="10sp"
-
-                        android:text="체험"/>
 
                     <ImageView
                         android:layout_width="wrap_content"

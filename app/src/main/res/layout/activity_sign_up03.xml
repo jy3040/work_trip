@@ -26,12 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <RadioGroup
-                    android:id="@+id/thema"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <RadioButton
+                    <CheckBox
                         android:id="@+id/thema1"
                         android:layout_width="wrap_content"
                         android:layout_height="32dp"
@@ -42,7 +37,7 @@
                         android:textColor="@drawable/sign_up_textcolor1"
                         android:button="@null" />
 
-                    <RadioButton
+                    <CheckBox
                         android:id="@+id/thema2"
                         android:layout_width="wrap_content"
                         android:layout_height="32dp"
@@ -54,7 +49,7 @@
                         android:textColor="@drawable/sign_up_textcolor1"
                         android:button="@null" />
 
-                    <RadioButton
+                    <CheckBox
                         android:id="@+id/thema3"
                         android:layout_width="wrap_content"
                         android:layout_height="32dp"
@@ -66,7 +61,7 @@
                         android:textColor="@drawable/sign_up_textcolor1"
                         android:button="@null" />
 
-                    <RadioButton
+                    <CheckBox
                         android:id="@+id/thema4"
                         android:layout_width="wrap_content"
                         android:layout_height="32dp"
@@ -78,7 +73,7 @@
                         android:textColor="@drawable/sign_up_textcolor1"
                         android:button="@null" />
 
-                    <RadioButton
+                    <CheckBox
                         android:id="@+id/thema5"
                         android:layout_width="wrap_content"
                         android:layout_height="32dp"
@@ -89,8 +84,6 @@
                         android:textAlignment="center"
                         android:textColor="@drawable/sign_up_textcolor1"
                         android:button="@null" />
-
-                </RadioGroup>
             </LinearLayout>
 
         </HorizontalScrollView>

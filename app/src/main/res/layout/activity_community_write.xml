@@ -18,7 +18,7 @@
 
                 <TextView
                     android:includeFontPadding="false"
-                    android:id="@+id/dogName"
+                    android:id="@+id/title_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -52,12 +52,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="질병명 또는 수술명"
-                    android:textColor="@color/black"
+                    android:text="제목"
+                    android:textColor="#000000"
                     android:layout_marginTop="30dp"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dogName" />
+                    app:layout_constraintTop_toBottomOf="@+id/title_1" />
 
                 <EditText
                     android:includeFontPadding="false"
@@ -69,8 +69,8 @@
                     android:layout_marginTop="6dp"
                     android:background="@drawable/line1_round_12"
                     android:paddingLeft="10dp"
-                    android:hint="질병 또는 받았던 수술의 이름을 적어주세요."
-                    android:textColor="@color/black"
+                    android:hint="워크샵 제목을 적어주세요"
+                    android:textColor="#000000"
                     android:textColorHint="#C7C7C7"
                     android:textSize="12sp"
                     app:layout_constraintHorizontal_bias="1.0"
@@ -83,8 +83,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="방문일"
-                    android:textColor="@color/black"
+                    android:text="사용한 금액"
+                    android:textColor="#000000"
                     android:layout_marginTop="15dp"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -99,10 +99,10 @@
                     android:layout_marginTop="6dp"
                     android:layout_marginRight="20dp"
                     android:background="@drawable/line1_round_12"
-                    android:hint="날짜를 입력해주세요."
-                    android:inputType="date"
+                    android:hint="ex) 1,000,000 (원 단위로 작성해주세요) "
+                    android:inputType="number"
                     android:paddingLeft="10dp"
-                    android:textColor="@color/black"
+                    android:textColor="#000000"
                     android:textColorHint="#C7C7C7"
                     android:textSize="12sp"
                     app:layout_constraintHorizontal_bias="1.0"
@@ -115,8 +115,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="방문한 병원"
-                    android:textColor="@color/black"
+                    android:text="워크숍 기간"
+                    android:textColor="#000000"
                     android:layout_marginTop="15dp"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -132,8 +132,8 @@
                     android:layout_marginTop="6dp"
                     android:background="@drawable/line1_round_12"
                     android:paddingLeft="10dp"
-                    android:hint="진단이나 수술을 받았던 병원 이름을 적어주세요."
-                    android:textColor="@color/black"
+                    android:hint="ex) 1박 2일"
+                    android:textColor="#000000"
                     android:textColorHint="#C7C7C7"
                     android:textSize="12sp"
                     app:layout_constraintHorizontal_bias="1.0"
@@ -147,8 +147,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="방문한 병원"
-                    android:textColor="@color/black"
+                    android:text="참여 인원 수"
+                    android:textColor="#000000"
                     android:layout_marginTop="15dp"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -164,25 +164,122 @@
                     android:layout_marginTop="6dp"
                     android:background="@drawable/line1_round_12"
                     android:paddingLeft="10dp"
-                    android:hint="진단이나 수술을 받았던 병원 이름을 적어주세요."
-                    android:textColor="@color/black"
+                    android:hint="ex) 24 (명 수를 입력해주세요)"
+                    android:textColor="#000000"
                     android:textColorHint="#C7C7C7"
+                    android:inputType="number"
                     android:textSize="12sp"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv9" />
+
+                <TextView
+                    android:includeFontPadding="false"
+                    android:id="@+id/tv11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="분위기"
+                    android:textColor="#000000"
+                    android:layout_marginTop="15dp"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv10" />
+                <HorizontalScrollView
+                    android:id="@+id/tv12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="6dp"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv11" >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <RadioGroup
+                            android:id="@+id/thema"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <RadioButton
+                                android:id="@+id/thema1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:paddingHorizontal="10dp"
+                                android:background="@drawable/sign_up_check_style1"
+                                android:text="활동적인"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/sign_up_textcolor1"
+                                android:button="@null" />
+
+                            <RadioButton
+                                android:id="@+id/thema2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:paddingHorizontal="10dp"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/sign_up_check_style1"
+                                android:text="탐구적인"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/sign_up_textcolor1"
+                                android:button="@null" />
+
+                            <RadioButton
+                                android:id="@+id/thema3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:paddingHorizontal="10dp"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/sign_up_check_style1"
+                                android:text="정적인"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/sign_up_textcolor1"
+                                android:button="@null" />
+
+                            <RadioButton
+                                android:id="@+id/thema4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:paddingHorizontal="10dp"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/sign_up_check_style1"
+                                android:text="체험적인"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/sign_up_textcolor1"
+                                android:button="@null" />
+
+                            <RadioButton
+                                android:id="@+id/thema5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:paddingHorizontal="10dp"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/sign_up_check_style1"
+                                android:text="학문적인"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/sign_up_textcolor1"
+                                android:button="@null" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
                 <TextView
                     android:includeFontPadding="false"
                     android:id="@+id/tv7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="처방"
-                    android:textColor="@color/black"
+                    android:text="후기 작성"
+                    android:textColor="#000000"
                     android:layout_marginTop="15dp"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv10" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv12" />
 
                 <EditText
                     android:includeFontPadding="false"
@@ -194,8 +291,8 @@
                     android:layout_marginTop="6dp"
                     android:background="@drawable/line2_round_21"
                     android:paddingLeft="10dp"
-                    android:hint="처방받은 약 등을 자유롭게 적어주세요."
-                    android:textColor="@color/black"
+                    android:hint="워크숍에서 방문한 장소, 했던 체험들에 대한 후기를 작성해주세요"
+                    android:textColor="#000000"
                     android:textColorHint="#C7C7C7"
                     android:textSize="12sp"
                     app:layout_constraintHorizontal_bias="1.0"

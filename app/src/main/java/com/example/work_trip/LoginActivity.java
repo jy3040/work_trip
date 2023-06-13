@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             if(c.getString(2).equals(binding.etPassword.getText().toString())){
                                 check_password = true;
                                 Intent it = new Intent(this, MainActivity.class);
-                                it.putExtra("num", c.getString(0));
+                                it.putExtra("name", c.getString(1));
                                 startActivity(it);
                                 finish();
                                 break;
@@ -79,7 +79,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.tv_sign_up:
                 Intent intent = new Intent(this, SignUp01Activity.class);
                 startActivity(intent);
-                finish();
                 break;
         }
 

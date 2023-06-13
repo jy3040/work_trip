@@ -38,75 +38,111 @@
                 android:background="@drawable/notifications_blue" />
         </LinearLayout>
 
-        <HorizontalScrollView
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/filter"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal">
 
-            <LinearLayout
+            <RadioGroup
+                android:id="@+id/thema"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_theme1"
+                <RadioButton
+                    android:id="@+id/thema0"
                     android:layout_width="wrap_content"
                     android:layout_height="32dp"
-                    android:background="@drawable/line2_round_21"
-                    android:text="#독서"
-                    android:textStyle="bold" />
+                    android:background="@drawable/sign_up_check_style1"
+                    android:button="@null"
+                    android:paddingHorizontal="10dp"
+                    android:text="전체"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/sign_up_textcolor1" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_theme2"
+                <RadioButton
+                    android:id="@+id/thema1"
                     android:layout_width="wrap_content"
                     android:layout_height="32dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/line2_round_21"
-                    android:text="#독서"
-                    android:textStyle="bold" />
+                    android:background="@drawable/sign_up_check_style1"
+                    android:button="@null"
+                    android:layout_marginLeft="15dp"
+                    android:paddingHorizontal="10dp"
+                    android:text="활동적인"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/sign_up_textcolor1" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_theme3"
+                <RadioButton
+                    android:id="@+id/thema2"
                     android:layout_width="wrap_content"
                     android:layout_height="32dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/line2_round_21"
-                    android:text="#독서"
-                    android:textStyle="bold" />
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/sign_up_check_style1"
+                    android:button="@null"
+                    android:paddingHorizontal="10dp"
+                    android:text="탐구적인"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/sign_up_textcolor1" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_theme4"
+                <RadioButton
+                    android:id="@+id/thema3"
                     android:layout_width="wrap_content"
                     android:layout_height="32dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/line2_round_21"
-                    android:text="#독서"
-                    android:textStyle="bold" />
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/sign_up_check_style1"
+                    android:button="@null"
+                    android:paddingHorizontal="10dp"
+                    android:text="정적인"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/sign_up_textcolor1" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_theme5"
+                <RadioButton
+                    android:id="@+id/thema4"
                     android:layout_width="wrap_content"
                     android:layout_height="32dp"
-                    android:layout_marginLeft="10dp"
-                    android:background="@drawable/line2_round_21"
-                    android:text="#독서"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </HorizontalScrollView>
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/sign_up_check_style1"
+                    android:button="@null"
+                    android:paddingHorizontal="10dp"
+                    android:text="체험적인"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/sign_up_textcolor1" />
 
-        <!--카드 자리-->
+                <RadioButton
+                    android:id="@+id/thema5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/sign_up_check_style1"
+                    android:button="@null"
+                    android:paddingHorizontal="10dp"
+                    android:text="학문적인"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/sign_up_textcolor1" />
 
-    </LinearLayout>
+            </RadioGroup>
+        </LinearLayout>
 
+    </HorizontalScrollView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="600dp"
-        android:layout_marginTop="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/filter"
         tools:listitem="@layout/card_commu" />
 
 

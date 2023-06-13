@@ -3,11 +3,10 @@ package com.example.work_trip;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -24,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     Fragment fragment_my;
 
 
+    String name;
     //리사이클러뷰 변수
     RecyclerView recyclerView;
 
@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        Intent intent = getIntent();
+        name = intent.getStringExtra("name");
 
         //리사이클러뷰 관련
         /*recyclerView=findViewById(R.id.recommended_course_cards);
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         fragment_community=new fragment_community();
         fragment_my=new fragment_my();
 
+        getSupportFragmentManager().beginTransaction().replace(R.id.home_layout, fragment_home).commitAllowingStateLoss();
 
         //네비게이션바
         bottomNavigationView=findViewById(R.id.bottom_navigation);
@@ -65,8 +69,6 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                //Log.i(tag, "바텀 네비게이션 클릭");
-
                 switch (item.getItemId())
                 {
                     case R.id.action_home:
@@ -78,12 +80,17 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case R.id.action_community:
+                        Bundle bundle = new Bundle();
+                        bundle.putString("name", name);
+                        fragment_community.setArguments(bundle);
                         getSupportFragmentManager().beginTransaction().replace(R.id.home_layout, fragment_community).commitAllowingStateLoss();
                         break;
 
                     case R.id.action_my:
                         getSupportFragmentManager().beginTransaction().replace(R.id.home_layout, fragment_my).commitAllowingStateLoss();
                         break;
+
+
                 }
                 return true;
             }

@@ -1,8 +1,10 @@
 package com.example.work_trip;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -25,7 +27,6 @@ import org.w3c.dom.Text;
 public class SignUp01Activity extends AppCompatActivity implements View.OnClickListener {
     // 데이터 바인딩을 위한 객체 생성
     private ActivitySignUp01Binding binding;
-    private CustomDialog customDialog;
     boolean password_visibility_1 = false;
     boolean password_visibility_2 = false;
 
@@ -119,24 +120,33 @@ public class SignUp01Activity extends AppCompatActivity implements View.OnClickL
                     SQLiteDatabase db;
                     db = helper.getReadableDatabase();
                     helper.onCreate(db);
-                    String sql = "select id from members;";
+                    String sql = "select * from members;";
                     Cursor c = db.rawQuery(sql, null);
+                    boolean check = false;
                     while(c.moveToNext()){
                         if(c.getString(1).equals(binding.etId.getText().toString())){
-                            //다이얼로그 밖의 화면은 흐리게 만들어줌
-                            WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
-                            layoutParams.flags = WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-                            layoutParams.dimAmount = 0.8f;
-                            getWindow().setAttributes(layoutParams);
-
-                           //  customDialog = new CustomDialog(this,"다이어로그에 들어갈 내용입니다.");
-                           // customDialog.show();
+                            check = true;
+                            break;
                         }
                         else{
-                            Toast.makeText(this, "사용 가능한 아이디입니다.", Toast.LENGTH_SHORT).show();
+                            check = false;
                         }
 
                     }
+                    if(!check){
+                        Toast.makeText(this, "사용 가능한 아이디입니다.", Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        new AlertDialog.Builder(this)
+                                .setTitle("아이디 중복 확인")
+                                .setMessage("이미 존재하는 아이디입니다. \n 아이디를 다시 설정해주세요")
+                                .setNeutralButton("닫기", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dlg, int sumthin) {
+                                    }
+                                })
+                                .show(); // 팝업창 보여줌
+                    }
+                    db.close();
 
                 }
                 catch (SQLException e){

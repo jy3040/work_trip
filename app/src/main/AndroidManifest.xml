@@ -17,22 +17,27 @@
             android:value="AIzaSyBeN8zTLycxcDJNA4etBa4vQGJM2UmFpHY"/>
 
         <activity
-            android:name=".Community_writeActivity"
+            android:name=".OnBoding02Activity"
             android:exported="false" />
         <activity
-            android:name=".Community_postActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CustomDialog"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true">
+            android:name=".OnBodingActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".Community_writeActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Community_postActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false">
         </activity>
         <activity
             android:name=".SignUp02_1Activity"
