@@ -59,6 +59,7 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:hint="비밀번호"
+                    android:inputType="textPassword"
                     android:background="#FFFFFF"
                     android:textColorHint="#9D9D9D"
                     android:textSize="13sp"

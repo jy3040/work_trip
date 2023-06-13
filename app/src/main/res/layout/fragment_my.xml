@@ -39,7 +39,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:text="지민 님"/>
+                android:text="Yerim Lee 님"/>
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -54,7 +54,7 @@
                         android:textSize="12sp"
                         android:textStyle="bold"
                         android:textColor="@color/gray"
-                        android:text="주식회사 워크트립"/>
+                        android:text="Company"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -72,7 +72,7 @@
                         android:textSize="12sp"
                         android:textStyle="bold"
                         android:textColor="@color/gray"
-                        android:text="마케팅 1팀"/>
+                        android:text="Department"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

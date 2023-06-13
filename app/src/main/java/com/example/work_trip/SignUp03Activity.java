@@ -65,11 +65,9 @@ public class SignUp03Activity extends AppCompatActivity implements View.OnClickL
                 if(!(check_thema.equals(""))){
                     // sql 처리
                     try{
-                        String sql = "INSERT INTO members(id,password, name, email,thema) values('" + id
+                        String sql = "INSERT INTO members(id,password, name) values('" + id
                                 + "', '" + password
                                 + "', '" + name
-                                + "', '" + email
-                                + "', '" + check_thema
                                 + "')";
                         db.execSQL(sql);
                         Log.d("DB","회원 테이블에 데이터를 추가했습니다");

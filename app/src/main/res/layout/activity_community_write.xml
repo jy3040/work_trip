@@ -91,21 +91,18 @@
                     app:layout_constraintTop_toBottomOf="@+id/tv2" />
 
                 <EditText
-                    android:includeFontPadding="false"
                     android:id="@+id/tv4"
-                    android:layout_width="match_parent"
+                    android:layout_width="370dp"
                     android:layout_height="40dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="6dp"
-                    android:layout_marginRight="20dp"
                     android:background="@drawable/line1_round_12"
                     android:hint="ex) 1,000,000 (원 단위로 작성해주세요) "
-                    android:inputType="number"
+                    android:includeFontPadding="false"
                     android:paddingLeft="10dp"
                     android:textColor="#000000"
                     android:textColorHint="#C7C7C7"
                     android:textSize="12sp"
-                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv3" />
 
