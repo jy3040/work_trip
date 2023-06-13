@@ -11,6 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Work_trip"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBeN8zTLycxcDJNA4etBa4vQGJM2UmFpHY"/>
+
         <activity
             android:name=".Community_writeActivity"
             android:exported="false" />
@@ -52,6 +57,9 @@
             android:exported="false" />
         <activity
             android:name=".CardDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CategoryLoadgingActivity"
             android:exported="false" />
     </application>
 

@@ -63,33 +63,6 @@ public class fragment_plan extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //일정 추가 후
-        //데이터 안 받아와짐
-        if (getArguments() != null)
-        {
-            //값 받아오기
-            String getName = getArguments().getString("name");
-            String getPeriod = getArguments().getString("period");
-
-            //변수 선언
-            androidx.cardview.widget.CardView cardAdded = rootView.findViewById(R.id.card_added_plan);
-            TextView notYet = rootView.findViewById(R.id.not_yet_plan);
-            TextView addButton = rootView.findViewById(R.id.plan_add_2);
-
-            //카드 보이게
-            cardAdded.setVisibility(View.VISIBLE);
-
-            TextView addedPeriod=rootView.findViewById(R.id.added_period);
-            TextView addedTitle=rootView.findViewById(R.id.added_title);
-
-            addedPeriod.setText(getPeriod);
-            addedTitle.setText(getName);
-
-            //나머지 안 보이게
-            notYet.setVisibility(View.GONE);
-            addButton.setVisibility(View.GONE);
-
-        }
     }
 
     @Override
@@ -127,6 +100,34 @@ public class fragment_plan extends Fragment {
             }
 
         });
+
+        //일정 추가 후
+        //데이터 안 받아와짐
+        if (getArguments() != null)
+        {
+            //변수 선언
+            androidx.cardview.widget.CardView cardAdded = rootView.findViewById(R.id.card_added_plan);
+            TextView notYet = rootView.findViewById(R.id.not_yet_plan);
+            TextView addButton = rootView.findViewById(R.id.plan_add_2);
+
+            //카드 보이게
+            cardAdded.setVisibility(View.VISIBLE);
+
+            TextView addedPeriod=rootView.findViewById(R.id.added_period);
+            TextView addedTitle=rootView.findViewById(R.id.added_title);
+
+            //값 받아오기
+            String getName = this.getArguments().getString("name");
+            String getPeriod = this.getArguments().getString("period");
+
+            addedPeriod.setText(getPeriod);
+            addedTitle.setText(getName);
+
+            //나머지 안 보이게
+            notYet.setVisibility(View.GONE);
+            addButton.setVisibility(View.GONE);
+
+        }
         return rootView;
 
     }

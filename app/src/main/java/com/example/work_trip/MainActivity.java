@@ -19,7 +19,10 @@ public class MainActivity extends AppCompatActivity {
 
     //fragment 변수
     Fragment fragment_home;
+    Fragment fragment_plan;
     Fragment fragment_community;
+    Fragment fragment_my;
+
 
     //리사이클러뷰 변수
     RecyclerView recyclerView;
@@ -50,7 +53,10 @@ public class MainActivity extends AppCompatActivity {
 
         //fragment 생성
         fragment_home=new fragment_home();
+        fragment_plan=new fragment_plan();
         fragment_community=new fragment_community();
+        fragment_my=new fragment_my();
+
 
         //네비게이션바
         bottomNavigationView=findViewById(R.id.bottom_navigation);
@@ -67,8 +73,16 @@ public class MainActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.home_layout, fragment_home).commitAllowingStateLoss();
                         break;
 
+                    case R.id.action_plan:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home_layout, fragment_plan).commitAllowingStateLoss();
+                        break;
+
                     case R.id.action_community:
                         getSupportFragmentManager().beginTransaction().replace(R.id.home_layout, fragment_community).commitAllowingStateLoss();
+                        break;
+
+                    case R.id.action_my:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home_layout, fragment_my).commitAllowingStateLoss();
                         break;
                 }
                 return true;

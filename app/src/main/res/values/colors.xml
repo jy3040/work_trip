@@ -6,7 +6,7 @@
     <color name="teal_200">#2757FF</color>
     <color name="teal_700">#2757FF</color>
 
-    <color name="black">#FFFFFF</color>
+    <color name="black">#000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#DDDDDD</color>
     <color name="main_blue">#2757FF</color>

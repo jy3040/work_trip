@@ -26,6 +26,7 @@ public class fragment_home extends Fragment {
     //버튼 포함 변수 선언
     private ViewGroup rootView;
     private LinearLayout card_recommended_course_;
+    private ImageButton category_lodging_;
 
 
     // TODO: Rename parameter arguments, choose names that match
@@ -74,10 +75,12 @@ public class fragment_home extends Fragment {
         rootView = (ViewGroup)inflater.inflate(R.layout.fragment_home, container, false);
 
         card_recommended_course_ = rootView.findViewById(R.id.card_recommended_course1);
+        category_lodging_ = rootView.findViewById(R.id.category_lodging);
 
 
 
-        //카드 클릭 intent (fragment->activity)
+        //intent (fragment->activity)
+        //추천 코스 카드 클릭
         card_recommended_course_.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,6 +90,18 @@ public class fragment_home extends Fragment {
 
             }
         });
+
+        //카테고리-숙소 클릭
+        category_lodging_.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //fragment라 activity intent와는 다른 방식
+                Intent intent = new Intent(getActivity(), CategoryLoadgingActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
         return rootView;
         // Inflate the layout for this fragment
     }
